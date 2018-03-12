@@ -1,0 +1,16 @@
+```
+import hashlib,random
+def get_md5(s):
+  return hashlib.md5(s.encode('utf-8').hexdigest()
+class User:
+    def __init__(self,name,password):
+      self.name = name
+      self.password = password
+      self.salt = ''.join([chr(randon.randint(48,122) for i in range(20)])
+      self.fixed = get_md5(name + password + self.salt)
+db = {'Bob':User('Bob','1234566'),'Jim':User('Jim','Gjy990325'),'Valve':User('Valve','V123456'),'Micheal':User('Micheal','ASDFGHJ')}
+
+def login(username,password):
+  user = db['username']
+  return user.fixed == get_md5(username + password + self.salt)
+  
